@@ -1,0 +1,157 @@
+<div class="side-content-section">
+    <div class="top-bar">
+        <div class="user-info">
+            <div class="user-top-info">
+                <img src="/src/assets/images/avatar.png">
+                <span class="profile-name" (click)="openDialog()">John Deo</span>
+                <!--<div class="drop-down">-->
+                    <!--<span class="nev-item"><a href="#">settings</a></span>-->
+                    <!--<span class="nev-item"><a href="#">Logout</a></span>-->
+                <!--</div>-->
+            </div>
+            <div class="menu">
+                <i class="fab fa-buromobelexperte"></i>
+            </div>
+            <div class="search">
+                <i class="fa fa-search"></i>
+            </div>
+            <div class="language">
+                <img src="/src/assets/images/en-us.jpg">
+                <span>EN</span>
+            </div>
+            <div class="chat-settings">
+                <i class="fa fa-comment-alt"></i>
+            </div>
+        </div>
+    </div>
+    <div class="content-header">
+        <div class="main-title">Team Chat</div>
+        <div class="sub-title">Lorem Ipsum is simply</div>
+    </div>
+    <div class="chat-container">
+        <div class="main-tab-nev">
+            <div class="chat-name-item">
+                <span>David</span>
+                <i class="fa fa-times"></i>
+            </div>
+            <div class="chat-name-item active">
+                <span>Louis</span>
+                <i class="fa fa-times"></i>
+            </div>
+            <div class="chat-name-item">
+                <span>Daniel</span>
+                <i class="fa fa-times"></i>
+            </div>
+            <div class="chat-name-item">
+                <span>Allen</span>
+                <i class="fa fa-times"></i>
+            </div>
+        </div>
+        <div class="chat-content-container">
+            <div class="chat-content-item">
+                <div class="chat-content-header">
+                    <div class="team-left-section">
+                        <div class="team-avatar">
+                            <img src="/src/assets/images/avatar.png">
+                        </div>
+                        <div class="team-details">
+                            <span class="team-name">Product Team</span>
+                            <span class="user-name">Louis Jones</span>
+                        </div>
+                    </div>
+                    <div class="team-right-section">
+                        <div class="team-settings">
+                            <i class="fas fa-ellipsis-v"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="chat-content">
+                    <div class="chat-content-box content-left">
+                        <div class="content-user-avatar">
+                            <img src="/src/assets/images/avatar.png">
+                        </div>
+                        <div class="chat-content-text">
+                            <span>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been</span>
+                            <div class="time">7.35pm</div>
+                        </div>
+
+                    </div>
+                    <div class="chat-content-box content-right">
+                        <div class="content-user-avatar">
+                            <img src="/src/assets/images/avatar.png">
+                        </div>
+                        <div class="chat-content-text">
+                            <span>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</span>
+                            <div class="time"><i class="fa fa-check-double read"></i> 7.35pm</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="chat-content-form">
+                    <form>
+                        <input type="text">
+                        <button type="submit"><i class="fa fa-paper-plane"></i></button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div #myModal class="modal fade">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title ">Title</h5>
+                    <button type="button" class="close" (click)="closeModel()">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form [formGroup]="profileForm">
+                        <div class="form-group">
+                            <label for="exampleFormControlInput1">First Name</label>
+                            <input type="text" class="form-control" id="exampleFormControlInput1" formControlName="firstName"
+                                   placeholder="name@example.com">
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleFormControlInput2">Last Name</label>
+                            <input type="text" class="form-control" id="exampleFormControlInput2" formControlName="lastName"
+                                   placeholder="name@example.com">
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleFormControlSelect1">Country</label>
+                            <select class="form-control" id="exampleFormControlSelect1" (change)="onCountryChange($event.target.value)">
+                                <option *ngFor="let country of countryList">{{country.name}}</option>
+
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleFormControlInput3">alpha2Code</label>
+                            <input type="text" class="form-control" id="exampleFormControlInput3" formControlName="alpha2Code"
+                                   placeholder="name@example.com">
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleFormControlInput4">Phone Number</label>
+                            <input type="text" class="form-control" id="exampleFormControlInput4" formControlName="phoneNumber"
+                                   placeholder="name@example.com">
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleFormControlInput5">Currency</label>
+                            <input type="text" class="form-control" id="exampleFormControlInput5" formControlName="Currency"
+                                   placeholder="name@example.com">
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleFormControlInput6">Time Zone</label>
+                            <input type="text" class="form-control" id="exampleFormControlInput6" formControlName="timeZone"
+                                   placeholder="name@example.com">
+                        </div>
+
+                        <img src="{{imageUrl}}" class="img-thumbnail">
+
+
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+

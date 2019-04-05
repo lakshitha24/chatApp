@@ -1,0 +1,305 @@
+@import '../variables';
+@import '../../node_modules/font-awesome/scss/font-awesome';
+body{
+  margin: 0;
+}
+
+.main-container *{
+  box-sizing: border-box;
+}
+
+.main-container {
+  font-family: sans-serif;
+  float: left;
+  width: 100%;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  color: #000;
+}
+
+/*######## main-container ########*/
+
+.main-container .side-content-section {
+  width: calc(100% - 280px);
+  float: left;
+}
+
+.main-container .side-content-section > div{
+  padding: 10px;
+}
+
+.main-container .side-content-section .top-bar {
+  width: 100%;
+  float: left;
+  background: #EEEFEE;
+}
+
+.main-container .side-content-section .top-bar .user-info{
+  width: 100%;
+  float: left;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  font-size: 13px;
+}
+
+.main-container .side-content-section .top-bar .user-info > div{
+  margin: 0 15px;
+  display: flex;
+  align-items: center;
+  position: relative;
+  cursor: pointer;
+}
+
+.main-container .side-content-section .top-bar .user-info > div i{
+  font-size: 21px;
+}
+
+.main-container .side-content-section .top-bar .user-info .user-top-info {
+
+}
+
+.main-container .side-content-section .top-bar .user-info .user-top-info img{
+  width: 30px;
+  margin-right: 10px;
+  border-radius: 50%;
+  border: 1px solid #b5b5b5;
+}
+
+.main-container .side-content-section .top-bar .user-info .user-top-info .drop-down {
+  position: absolute;
+  top: 30px;
+  left: 0;
+  background: #FFF;
+  border-radius: 5px;
+  display: none;
+}
+
+.main-container .side-content-section .top-bar .user-info .user-top-info:hover .drop-down,
+.main-container .side-content-section .top-bar .user-info .user-top-info:hover .drop-down:hover {
+  display: block;
+}
+
+.main-container .side-content-section .top-bar .user-info .user-top-info .drop-down .nev-item{
+  padding: 5px;
+  float: left;
+}
+
+.main-container .side-content-section .top-bar .user-info .language img{
+  width: 30px;
+  margin-right: 10px;
+}
+
+.main-container .side-content-section .content-header {
+  padding: 20px 10px;
+  float: left;
+  width: 100%;
+  background: #EEEFEE;
+}
+
+.main-container .side-content-section .content-header .main-title {
+  font-size: 19px;
+  text-transform: uppercase;
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+.main-container .side-content-section .content-header .sub-title {
+  font-size: 14px;
+}
+
+.main-container .side-content-section .chat-container{
+  float: left;
+  width: 100%;
+  background: #FAFCF6;
+  border-top: 1px solid #dadada;
+  padding-top: 0;
+}
+
+.main-container .side-content-section .chat-container .main-tab-nev .chat-name-item{
+  float: left;
+  width: 100px;
+  text-align: center;
+  padding: 10px;
+  margin: 0 5px;
+  cursor: pointer;
+  position: relative;
+}
+
+.main-container .side-content-section .chat-container .main-tab-nev .chat-name-item i{
+  float: right;
+  color: #c1c1c1;
+  cursor: pointer;
+}
+
+.main-container .side-content-section .chat-container .main-tab-nev .chat-name-item i:hover{
+  color: #a5a5a5;
+}
+
+.main-container .side-content-section .chat-container .main-tab-nev .chat-name-item.active{
+  background: #FFF;
+  border: 1px solid #dadada;
+  border-bottom: none;
+}
+
+.main-container .side-content-section .chat-container .main-tab-nev .chat-name-item.active:after{
+  content: " ";
+  height: 10px;
+  width: 100%;
+  position: absolute;
+  bottom: -3px;
+  left: 0;
+}
+
+.main-container .side-content-section .chat-container .chat-content-container {
+  float: left;
+  width: 100%;
+  border: 1px solid #dadada;
+  margin-top: -1px;
+  background: #FFF;
+}
+
+.main-container .side-content-section .chat-container .chat-content-container .chat-content-header {
+  padding: 10px;
+  border-bottom: 1px solid #dadada;
+  float: left;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.main-container .side-content-section .chat-container .chat-content-container .chat-content-header .team-left-section {
+  display: flex;
+  align-items: center;
+}
+
+.main-container .side-content-section .chat-container .chat-content-container .chat-content-header .team-avatar img{
+  width: 50px;
+  border-radius: 50%;
+  margin-right: 10px;
+  border: 1px solid #b5b5b5;
+}
+.main-container .side-content-section .chat-container .chat-content-container .chat-content-header .team-avatar,
+.main-container .side-content-section .chat-container .chat-content-container .chat-content-header .team-details {
+  float: left;
+}
+
+.main-container .side-content-section .chat-container .chat-content-container .chat-content-header .team-details .team-name{
+  float: left;
+  width: 100%;
+  font-size: 16px;
+}
+
+.main-container .side-content-section .chat-container .chat-content-container .chat-content-header .team-details .user-name{
+  float: left;
+  width: 100%;
+  font-size: 13px;
+}
+
+.main-container .side-content-section .chat-container .chat-content-container .chat-content-header .team-settings {
+  padding: 15px;
+  cursor: pointer;
+}
+
+.main-container .side-content-section .chat-container .chat-content-container .chat-content-header .team-settings i {
+  color: #c1c1c1;
+}
+
+.main-container .side-content-section .chat-container .chat-content-container .chat-content-header .team-settings:hover i {
+  color: #a5a5a5;
+}
+
+.main-container .side-content-section .chat-container .chat-content-container .chat-content {
+  float: left;
+  width: 100%;
+  padding: 20px 10px;
+}
+
+.main-container .side-content-section .chat-container .chat-content-container .chat-content .chat-content-box {
+  width: 100%;
+  float: left;
+  margin-bottom: 20px;
+}
+
+.main-container .side-content-section .chat-container .chat-content-container .chat-content .chat-content-box.content-right > div {
+  float: right;
+}
+
+.main-container .side-content-section .chat-container .chat-content-container .chat-content .chat-content-box img{
+  width: 50px;
+  border-radius: 50%;
+  float: left;
+  margin: 0 15px;
+  border: 1px solid #b5b5b5;
+}
+
+.main-container .side-content-section .chat-container .chat-content-container .chat-content .chat-content-box .chat-content-text{
+  max-width: 80%;
+  float: left;
+}
+
+.main-container .side-content-section .chat-container .chat-content-container .chat-content .chat-content-box .chat-content-text .time{
+  padding: 5px;
+  font-size: 10px;
+  float: left;
+  width: 100%;
+}
+
+.main-container .side-content-section .chat-container .chat-content-container .chat-content .chat-content-box .chat-content-text span{
+  padding: 15px;
+  float: left;
+}
+
+.main-container .side-content-section .chat-container .chat-content-container .chat-content .chat-content-box.content-right .chat-content-text span{
+  background: #2f2f2f;
+  color: #FFF;
+  float: right;
+}
+
+.main-container .side-content-section .chat-container .chat-content-container .chat-content .chat-content-box.content-right .chat-content-text .time{
+  text-align: right;
+}
+
+.main-container .side-content-section .chat-container .chat-content-container .chat-content .chat-content-box.content-right .chat-content-text .time .read{
+  color: #4fa6d7;
+}
+
+.main-container .side-content-section .chat-container .chat-content-container .chat-content-form input{
+  width: calc(100% - 55px);
+  float: left;
+  padding: 10px;
+  background: #F1F1F1;
+  border: none;
+  border-top: 1px solid #dadada;
+}
+
+.main-container .side-content-section .chat-container .chat-content-container .chat-content-form input:active,
+.main-container .side-content-section .chat-container .chat-content-container .chat-content-form input:focus{
+  outline: none;
+  background: #fbfbfb;
+}
+
+.main-container .side-content-section .chat-container .chat-content-container .chat-content-form button{
+  width: 55px;
+  float: left;
+  padding: 10px;
+  background: #E4E4E4;
+  border: none;
+  border-top: 1px solid #dadada;
+  cursor: pointer;
+}
+
+.main-container .side-content-section .chat-container .chat-content-container .chat-content-form button:active,
+.main-container .side-content-section .chat-container .chat-content-container .chat-content-form button:hover,
+.main-container .side-content-section .chat-container .chat-content-container .chat-content-form button:focus{
+  outline: none;
+  background: #cccccc;
+}
